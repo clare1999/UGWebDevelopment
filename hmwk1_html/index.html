@@ -5,14 +5,45 @@
 
 <!-- head statement -->
 <head>
-	<title>
-		One Piece: Devil Fruits
-	</title>
+	<title>One Piece: Devil Fruits</title>
+	<style type="text/css">
+		.quote{
+			text-align: center;
+			font-style: italic;
+			font-size: 15px;
+		}
+		.fruitNameContainer{
+			text-align: center;
+			font-size: 12px;
+		}
+		.fruitTypeParaContainer{
+			text-align: center;
+			font-size: 12px;
+			font-style: italic;
+			color: #ba492d;
+		}
+		.fruitTypeLogiaContainer{
+			text-align: center;
+			font-size: 12px;
+			font-style: italic;
+			color: #61a133;
+		}
+		.fruitTypeZoanContainer{
+			text-align: center;
+			font-size: 12px;
+			font-style: italic;
+			color: #2678c9;
+		}
+		td.fruitContainer{
+			outline: solid thick #ba8d2d;
+			background-color: #ffd57a;	
+		}
+	</style>
 </head>
 
 
-<body>
-	<table wdith="10%" border=2 bgcolor="#efefef" cellpadding="5" cellspacing=4>
+<body bgcolor="#ffeabd">
+	<table wdith="10%" cellpadding="5" cellspacing=4>
 		<tr>
 			<td width="10%"></td>
 			<td width="10%"></td>
@@ -25,9 +56,33 @@
 			<td width="10%"></td>
 			<td width="10%"></td>
 		</tr>
+
+		<tr>
+			<td colspan="10">
+				<h1 align="center">Welcome to One Piece!</h1>
+			</td>
+			
+		</tr>
+		
+		<!-- Quote -->
+		<tr>
+			<td></td>
+			<td colspan="8">
+				<blockquote>
+					<p class="quote">
+						I heard they are incarnations of the sea devil. Supposedly, if you eat one, you will gain devil powers...<br>
+						but the sea will hate you and take your ability to swim! 
+						(<a href="https://onepiece.fandom.com/wiki/Shanks">Shanks</a>)
+					</p>
+				</blockquote>
+			</td>
+		</tr>
+
+
 		<!-- Introduction -->
 		<tr>
-			<td colspan="4">
+			<td colspan="1"></td>	
+			<td colspan="8">
 				<h3>Introduction</h3>
 				<p>
 					Devil Fruits are mysterious, distinctive fruits scattered throughout the world, known for granting their eaters permanent superhuman powers and an equally permanent inability to swim.
@@ -35,21 +90,30 @@
 				<p>
 					As a whole, Devil Fruits encompass hundreds of different powers, from the (apparently) mundane to the inherently mass-destructive. These are broadly grouped along three classes: 
 					<ol>
-						<li><b>Paramecia</b>, which offer a vast array of strange abilities, </li>
-						<li><b>Zoan</b>, which allow the users to transform into animals,</li>
-						<li><b>Logia</b>, the rarest class which grant the users the power to become and control natural elements.</li>
+						<li id="parameciaDef">
+							<b>Paramecia</b> - The most common of the three Devil Fruit types, Paramecia-type Devil Fruits grant their users superhuman powers other than animals transformation or elemental transformation; such powers as shock wave generation and locking onto targets. Paramecia Fruits can alter features of the user's body such as a rubber physique or a body of blades. Some Paramecia Fruits allow the user to modify the people, objects, and environment around them, like by making things levitate or turning people into toys. Finally, there are some users that can generate and manipulate substances, such as wax and poison.	
+						</li>
+						<li id="zoanDef">
+							<b>Zoan</b> - The rarest and most powerful of the three Devil Fruit types, Logia-type Devil Fruits allow their users to create, control, and transform their body into a natural element, such as ice, mud, smoke, fire, or darkness. The elemental transformation effectively makes the user intangible, as well as allowing the user to remain in control of their body, even when it is broken into pieces. They also gain every ability related to that element, such as sand being able to absorb moisture or lightning being able to travel through conductive objects.
+						</li>
+						<li id="logiaDef">
+							<b>Logia</b> - The users of Zoan-type Devil Fruits gain the ability to transform into an animal, as well as transform into a hybrid form of their own species and the species the fruit allows them to transform into. A recently discovered science allows Zoan Fruits to be integrated into objects, bringing the object to life and granting it the standard Zoan transformations. Carnivorous animal Zoans are better suited for combat.
+						</li>
 					</ol>
 				</p>
 			</td>
 		</tr>
 		
+		
 		<!-- Field Guide -->
 		<tr>
+			<td></td>	
 			<td colspan="3">
 				<h3>Field Guide of Devil Fruits</h3>
 			</td>
 		</tr>
 		<tr>
+			<td colspan="2"></td>	
 			<td colspan="2" align="center">
 				<form>
 					Types of Devil Fruits
@@ -81,63 +145,450 @@
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td colspan="2"></td>	
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia1Gomu.jpg" width="80%" title="click here for more details"></td></tr>
-					<tr><td align="center">Gomu Gomu no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Gomu">
+								<img src="images/paramecia1Gomu.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia2Bara.jpg" width="80%"></td></tr>
-					<tr><td align="center">Bara Bara no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Bara">
+								<img src="images/paramecia2Bara.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Bara Bara no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia3Sube.jpg" width="80%"></td></tr>
-					<tr><td align="center">Sube Sube no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Sube">
+								<img src="images/paramecia3Sube.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Sube Sube no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia4Bomu.jpg" width="80%"></td></tr>
-					<tr><td align="center">Bomu Bomu no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Bomu">
+								<img src="images/paramecia4Bomu.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Bomu Bomu no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia5Kiro.jpg" width="80%"></td></tr>
-					<tr><td align="center">Kiro Kiro no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Kiro">
+								<img src="images/paramecia5Kiro.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Kiro Kiro no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
-					<tr><td align="center"><img src="images/paramecia6Hana.jpg" width="80%"></td></tr>
-					<tr><td align="center">Hana Hana no Mi</td></tr>
-					<tr><td align="center"><i>Paramecia</i></td></tr>
+					<tr>
+						<td align="center">
+							<a href="#Hana">
+								<img src="images/paramecia6Hana.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Hana Hana no Mi</td></tr>
+					<tr><td class="fruitTypeParaContainer">Paramecia</td></tr>
 				</table>
 			</td>
 		</tr>
+		<tr>
+			<td colspan="2"></td>	
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Mera">
+								<img src="images/logia1Mera.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Mera Mera no Mi</td></tr>
+					<tr><td class="fruitTypeLogiaContainer"><i>Logia</i></td></tr>
+				</table>
+			</td>
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Moku">
+								<img src="images/logia2Moku.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Moku Moku no Mi</td></tr>
+					<tr><td class="fruitTypeLogiaContainer"><i>Logia</i></td></tr>
+				</table>
+			</td>
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Suna">
+								<img src="images/logia3Suna.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Suna Suna no Mi</td></tr>
+					<tr><td class="fruitTypeLogiaContainer">Logia</td></tr>
+				</table>
+			</td>
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Hito">
+								<img src="images/zoan1Hito.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Hito Hito no Mi</td></tr>
+					<tr><td class="fruitTypeZoanContainer">Zoan</td></tr>
+				</table>
+			</td>
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Inu">
+								<img src="images/zoan2Inu.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Inu Inu no Mi</td></tr>
+					<tr><td class="fruitTypeZoanContainer">Zoan</td></tr>
+				</table>
+			</td>
+			<td class="fruitContainer">
+				<table>
+					<tr>
+						<td align="center">
+							<a href="#Ushi">
+								<img src="images/zoan3Ushi.jpg" width="80%" title="click here for more details">
+							</a>
+						</td>
+					</tr>
+					<tr><td class="fruitNameContainer">Ushi Ushi no Mi</td></tr>
+					<tr><td class="fruitTypeZoanContainer">Paramecia</td></tr>
+				</table>
+			</td>
+		</tr>
+		
+
 		<!-- Details on Devil Fruits -->
 		<tr>
+			<td></td>
 			<td colspan="3">
 				<h3>Details on Devil Fruits</h3>
 			</td>
 		</tr>
 		<tr>
-			<td>Fruit</td>
-			<td>Processor</td>
-			<td colspan="5">Details</td>
+			<td></td>
+			<th>Fruit</th>
+			<th>Processor</th>
+			<th colspan="5">Details</th>
 		</tr>
-		<tr>
-			<td align="center">Gomu Gomu no Mi</td>
-			<td align="center">Monkey D. Luffy</td>
+
+		<tr id="Gomu">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia1Gomu.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait1_Luffy.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Monkey D. Luffy</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Bara">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia2Bara.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Bara Bara no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait2_Buggy.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Sube">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia3Sube.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Sube Sube no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait3_Alvida.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Bomu">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia4Bomu.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Bomu Bomu no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait4_Gem.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Kiro">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia5Kiro.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Kiro Kiro no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait5_Mikita.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Hana">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/paramecia6Hana.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Hana Hana no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait6_Robin.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Mera">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/logia1Mera.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Mera Mera no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait1_Ace.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Ace</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Moku">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/logia2Moku.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Moku Moku no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait2_Smoker.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Smoker</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Suna">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/logia3Suna.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Suna Suna no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait3_Crocodile.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Crocodile</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Hito">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/zoan1Hito.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Hito Hito no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait1_Chopper.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Tony Tony Chopper</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Inu">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/zoan2Inu.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Inu Inu no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait2_Yamato.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Yamato</td></tr>
+				</table>
+			</td>
+			<td colspan="5">
+				<ul>
+					<li>"Gomu" means "rubber" in Japanese.</li>
+					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
+					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr id="Ushi">
+			<td></td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/zoan3Ushi.jpg" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Ushi Ushi no Mi</td></tr>
+				</table>
+			</td>
+			<td>
+				<table>
+					<tr><td align="center"><img src="images/Portrait3_Dalton.webp" width="80%"></td></tr>
+					<tr><td class="fruitNameContainer">Dalton</td></tr>
+				</table>
+			</td>
 			<td colspan="5">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
