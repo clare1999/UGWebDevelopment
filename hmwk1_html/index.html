@@ -5,14 +5,14 @@
 
 <!-- head statement -->
 <head>
-	<title>One Piece: Devil Fruits</title>
+	<title>Devil Fruit Encyclopedia</title>
 	<style type="text/css">
 		.quote{
 			text-align: center;
 			font-style: italic;
 			font-size: 15px;
 		}
-		.fruitNameContainer{
+		.fruitNameContainer{ 
 			text-align: center;
 			font-size: 12px;
 		}
@@ -34,7 +34,14 @@
 			font-style: italic;
 			color: #2678c9;
 		}
+		.fieldSet{
+		  border: thick #ba8d2d solid; 
+		}
 		td.fruitContainer{
+			outline: solid thick #ba8d2d;
+			background-color: #ffd57a;	
+		}
+		th.tableHeader{
 			outline: solid thick #ba8d2d;
 			background-color: #ffd57a;	
 		}
@@ -59,9 +66,8 @@
 
 		<tr>
 			<td colspan="10">
-				<h1 align="center">Welcome to One Piece!</h1>
+				<h1 align="center" id="Top">Devil Fruit Encyclopedia</h1>
 			</td>
-			
 		</tr>
 		
 		<!-- Quote -->
@@ -85,7 +91,7 @@
 			<td colspan="8">
 				<h3>Introduction</h3>
 				<p>
-					Devil Fruits are mysterious, distinctive fruits scattered throughout the world, known for granting their eaters permanent superhuman powers and an equally permanent inability to swim.
+					Devil Fruits are mysterious, distinctive fruits scattered throughout the world, known for granting their eaters permanent superhuman powers and <strong>an equally permanent inability to swim</strong>.
 				</p>
 				<p>
 					As a whole, Devil Fruits encompass hundreds of different powers, from the (apparently) mundane to the inherently mass-destructive. These are broadly grouped along three classes: 
@@ -317,26 +323,26 @@
 		</tr>
 		<tr>
 			<td></td>
-			<th>Fruit</th>
-			<th>Processor</th>
-			<th colspan="5">Details</th>
+			<th class="tableHeader">Fruit</th>
+			<th class="tableHeader">Processor</th>
+			<th colspan="6" class="tableHeader">Details</th>
 		</tr>
 
 		<tr id="Gomu">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia1Gomu.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait1_Luffy.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Monkey D. Luffy</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -347,42 +353,43 @@
 
 		<tr id="Bara">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia2Bara.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Bara Bara no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait2_Buggy.webp" width="80%"></td></tr>
-					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitNameContainer">Buggy the Star Clown</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
-					<li>"Gomu" means "rubber" in Japanese.</li>
-					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
-					<li>One major risk of the user's powers is that their stretched limbs take a moment to unstretch back into place, leaving them vulnerable to attacks in the moments when their limbs are stretched, as Buggy and Kuro both took advantage of early on in the series.</li>
+					<li>Barabara is a Japanese onomatopoeia meaning disconnected/disperse/in pieces/asunder.</li>
+					<li>It is called the Chop-Chop Fruit.</li>
+					<li>The fruit's major strength, as demonstrated by Buggy, is that the user becomes permanently immune to damage from being cut or pierced, regardless in what manner, be it vertical, horizontal, or otherwise. </li>
+					<li>Though the user is immune to slashing and piercing attacks, they are still susceptible to other forms of engagement, such as blunt attacks like punches and kicks. </li>
 				</ul>
 			</td>
 		</tr>
 
 		<tr id="Sube">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia3Sube.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Sube Sube no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait3_Alvida.webp" width="80%"></td></tr>
-					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitNameContainer">Alvida</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -393,19 +400,19 @@
 
 		<tr id="Bomu">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia4Bomu.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Bomu Bomu no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait4_Gem.webp" width="80%"></td></tr>
-					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitNameContainer">Gem</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -416,19 +423,19 @@
 
 		<tr id="Kiro">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia5Kiro.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Kiro Kiro no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait5_Mikita.webp" width="80%"></td></tr>
-					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitNameContainer">Mikita</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -439,19 +446,19 @@
 
 		<tr id="Hana">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/paramecia6Hana.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Hana Hana no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait6_Robin.webp" width="80%"></td></tr>
-					<tr><td class="fruitNameContainer">Gomu Gomu no Mi</td></tr>
+					<tr><td class="fruitNameContainer">Robin</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -462,19 +469,19 @@
 
 		<tr id="Mera">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/logia1Mera.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Mera Mera no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait1_Ace.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Ace</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -485,19 +492,19 @@
 
 		<tr id="Moku">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/logia2Moku.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Moku Moku no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait2_Smoker.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Smoker</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -508,19 +515,19 @@
 
 		<tr id="Suna">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/logia3Suna.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Suna Suna no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait3_Crocodile.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Crocodile</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -531,19 +538,19 @@
 
 		<tr id="Hito">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/zoan1Hito.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Hito Hito no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait1_Chopper.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Tony Tony Chopper</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -554,19 +561,19 @@
 
 		<tr id="Inu">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/zoan2Inu.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Inu Inu no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait2_Yamato.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Yamato</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -577,19 +584,19 @@
 
 		<tr id="Ushi">
 			<td></td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/zoan3Ushi.jpg" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Ushi Ushi no Mi</td></tr>
 				</table>
 			</td>
-			<td>
+			<td class="fruitContainer">
 				<table>
 					<tr><td align="center"><img src="images/Portrait3_Dalton.webp" width="80%"></td></tr>
 					<tr><td class="fruitNameContainer">Dalton</td></tr>
 				</table>
 			</td>
-			<td colspan="5">
+			<td colspan="6" class="fruitContainer">
 				<ul>
 					<li>"Gomu" means "rubber" in Japanese.</li>
 					<li>The fruit's major strength, as demonstrated by Luffy, is that the user's body can stretch, bend, bounce, inflate, and twist like rubber, even when the user himself is nullified.</li>
@@ -598,6 +605,92 @@
 			</td>
 		</tr>
 
+		<!-- interaction -->
+		<tr>
+			<td colspan="3"></td>
+			<td colspan="4" align="center">
+				<h3>Get Your Devil Fruit!</h3>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"></td>
+			<td colspan="4">
+				<fieldset class="fieldSet">
+					<legend style="color: #ba8d2d; font-weight: bold; font-style: italic;">Basic Info</legend>
+
+					<label for="username">Username: </label><br />
+					<input type="text" name="username" required="required"><br /><br />
+					
+					<label for="passowrd">Password: </label><br />
+					<input type="password" name="password" required="required"><br /><br />
+
+					<label for="email">Email: </label><br />
+					<input type="email" name="email" required="required"><br /><br />
+
+					<label for="user-picture">Upload a picture of yours: </label><br />
+					<input type="file" name="user-picture"><br /><br />
+
+					<label for="birthday">Birthday: </label><br />
+					<input type="date" name="birthday" required="required"><br /><br />
+
+					<label for="website">Personal Website: </label><br />
+					<input type="url" name="website"><br /><br />
+
+					<input type="submit" name="login" value="login"><br />
+
+				</fieldset>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"></td>
+			<td colspan="4">
+				<fieldset class="fieldSet">
+					<legend style="color: #ba8d2d; font-weight: bold; font-style: italic;">Additional Info</legend>
+
+					<label for="search">Search your ideal devil fruit here: </label><br />
+					<input type="search" name="search" value="Gomu Gomu ni Mo">
+					<input type="image" src="images/search.webp" height="20">	
+					</div>
+					<br /><br />
+
+					<label for="bidprice">Enter the max price(in dollar amount) you are willing to pay (note that
+					the minimum price is $100, increasing at the step of 10): </label><br />
+					<input type="number" name="bidprice" step=10 min=100 value=30><br /><br />
+
+
+					<label for="payment">Payment Method: </label><br />
+					<input type="radio" name="paymentMethod" value='paypal' checked="checked" />PayPal<br />
+					<input type="radio" name="paymentMethod" value='visa' />Visa<br />
+					<input type="radio" name="paymentMethod" value='mastercard' />Master Card<br />
+					<input type="radio" name="paymentMethod" value='alipay' />Alipay<br />
+					<input type="radio" name="paymentMethod" value='wechat' />WeChat<br />
+					<br />
+
+					<label for="comments">Any other notes?</label><br />
+					<textarea name='comments' cols=20 rows=4>Enter your notes....</textarea><br />
+
+					<input type="submit" name="submit" value="submit!"><br />
+
+				</fieldset>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="4"></td>
+			<td align="center" colspan="2">
+				<a href="#Top">
+					<img src="images/backTop.png" width="15%" title="Back to Top">
+				</a>
+			</td>
+		</tr>
 
 	</table>
+
+
+
+	<!-- TODO -->
+	<!-- 2. in case pictures are not loaded as intended -->
+	<!-- 3. pop out for pictures -->
+
+	
 </body>
