@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+	<title>CSS3</title>	
+	<link rel="stylesheet" type="text/css" href="css/demoStyleFile.css">
+	<style type="text/css">
+		/*we can also use import*/
+		/*method 1*/
+		/*@import url(css/default.css);*/
+		/*method 2*/
+		@import "css/default.css";
+
+		/*Document-level style*/
+		/*universal selector*/
+		* {
+			color: purple;
+		}
+
+		/*element selector*/
+		h1, h2, h3{
+			color: green;
+			font-style: italic;
+		}
+
+		h2{
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+
+		/*class selector*/
+		.note {
+			color: grey;
+		}
+		/*higher priority*/
+		p.note {
+			color: grey;
+			font-style: italic;
+		}
+		img.align-left{
+			float: left;
+			margin-right: 10px; 
+		}
+		img.align-right{
+			float: right;
+			margin-left: 10px;
+		}
+		img.medium{
+			width: 250px;
+		}
+
+		/*id selector*/
+		#Top {
+			font-style: bold;
+			font-size: 30px;
+		}
+
+		/*direct child element selector*/
+		ol>li {
+			font-style: bold;
+			color: red;
+		}
+
+		/*child/grandchild .. selector*/
+		p li {
+			font-style: bold;
+			color: white;
+		}
+
+		/*psedo class*/
+		/*red*/
+		a:link{
+			color: #FF0000;
+		}
+		a:active{
+			color: #00FF00;
+		}
+		/*green*/
+		a:visited{
+			color: #0000FF;
+		}
+		div:hover{
+			color: pink;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		div:hover a{
+			color: white;
+		}
+		input.submit:hover{
+			background-color: #665544;
+		}
+		input.submit:active{
+			background-color: chocolate;
+		}
+		input.text:focus{
+			color:#665544;
+		}
+		p.ex1 {
+			display: none;
+		}
+		p.ex2 {
+			display: inline;
+		}
+		p.ex3 {
+			display: block;
+		}
+		p.ex4 {
+			display: inline-block;
+		}
+		p:hover {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+
+	</style>
+</head>
+
+
+<body>
+	<h1 id='Top'>This is head 1 formatted by document-level style</h1>
+	<h2>This is head 2 formatted by document-level style</h2>
+	<h3>This is head 3 formatted by document-level style</h3>
+	<h4>This is head 4 unformatted</h4>
+
+	<!-- invalidate document-level style if running into conflicts -->
+	<h1 style="color: blue">
+		This is head 1 formatted by inline style
+	</h1>
+	<h1 style="color: blue; text-decoration: line-through;">
+		This is head 1 formatted by inline style
+	</h1>
+
+	<hr>
+	<p>
+		This a text with a left margin of 20px.
+	</p>
+
+	<a class='note'>I am a formatted a</a>
+	<p class='note'>I am a formatted paragraph</p>
+	
+	<p id=#boldText>
+		I am another formatted paragraph by id selector	
+	</p>
+
+	<ol>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+	</ol>
+
+	<p>
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+		</ul>
+	</p>
+
+	<h2>apply more than two class</h2>
+
+	<div>
+		<img src="images/quartet.jpeg" class='align-left medium'>
+	</div>
+	
+	<div>
+		<a href="#Top">Back to Top</a>
+	</div>
+
+	<div>Hover here.</div>
+
+	<p class='ex1'>none</p>
+	<p class='ex2'>inline</p>
+	<p class='ex3'>block (hr before and after)</p>
+	<p class='ex4'>inline-block (hr before and after)</p>
+
+
+</body>
+
+
+
+
