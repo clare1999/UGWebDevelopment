@@ -2,9 +2,15 @@
 
 <head>
 	<title>CSS3</title>	
+
+	<!-- external style -->
 	<link rel="stylesheet" type="text/css" href="css/demoStyleFile.css">
+	
+	<!-- external style -->
+	<!-- document-level style -->
 	<style type="text/css">
-		/*we can also use import*/
+		/*external style*/
+		/*import external css files*/
 		/*method 1*/
 		/*@import url(css/default.css);*/
 		/*method 2*/
@@ -23,7 +29,11 @@
 		}
 
 		h2{
-			background-color: rgba(255, 255, 255, 0.3);
+			background-color: rgba(255, 255, 255, 0.3); /*opacity*/
+		}
+
+		p{
+			text-align: justify;
 		}
 
 		/*class selector*/
@@ -35,11 +45,11 @@
 			color: grey;
 			font-style: italic;
 		}
-		img.align-left{
+		img.float-align-left{
 			float: left;
 			margin-right: 10px; 
 		}
-		img.align-right{
+		img.float-align-right{
 			float: right;
 			margin-left: 10px;
 		}
@@ -66,16 +76,26 @@
 		}
 
 		/*psedo class*/
+		/*
+			1. a:link
+			2. a:active
+			3. a:visited
+			4. :hover
+			5. :focus
+		*/
 		/*red*/
 		a:link{
 			color: #FF0000;
+			font-weight: bold;
 		}
 		a:active{
 			color: #00FF00;
+			text-decoration: underline;
 		}
 		/*green*/
 		a:visited{
 			color: #0000FF;
+			text-decoration: underline dotted;
 		}
 		div:hover{
 			color: pink;
@@ -93,6 +113,7 @@
 		input.text:focus{
 			color:#665544;
 		}
+		
 		p.ex1 {
 			display: none;
 		}
@@ -106,7 +127,8 @@
 			display: inline-block;
 		}
 		p:hover {
-			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			background-color: rgba(0, 0, 0, 0.3);
 		}
 
 
@@ -120,6 +142,7 @@
 	<h3>This is head 3 formatted by document-level style</h3>
 	<h4>This is head 4 unformatted</h4>
 
+	<!-- inline style -->
 	<!-- invalidate document-level style if running into conflicts -->
 	<h1 style="color: blue">
 		This is head 1 formatted by inline style
@@ -144,6 +167,8 @@
 		<li>item1</li>
 		<li>item2</li>
 		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>	
 	</ol>
 
 	<p>
@@ -151,15 +176,20 @@
 			<li>item1</li>
 			<li>item2</li>
 			<li>item3</li>
+			<li>item4</li>
+			<li>item5</li>
 		</ul>
 	</p>
 
 	<h2>apply more than two class</h2>
 
-	<div>
-		<img src="images/quartet.jpeg" class='align-left medium'>
-	</div>
-	
+	<figure>
+		<img src="images/quartet.jpeg" class="float-align-right" width="30%" alt="unable to display" title="float-align-right">
+	</figure>
+	<p style="text-align: justify;">
+		Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device. The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable. The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+	</p>
+
 	<div>
 		<a href="#Top">Back to Top</a>
 	</div>
@@ -170,6 +200,282 @@
 	<p class='ex2'>inline</p>
 	<p class='ex3'>block (hr before and after)</p>
 	<p class='ex4'>inline-block (hr before and after)</p>
+
+	<h2>Colors</h2>
+	<ul> color (font color, or color in the most general sense)
+		<li style="color: DarkCyan">DarkCyan</li>
+		<li style="color: #ee3e80">#ee3e80</li>
+		<li style="color: rgb(100, 100, 90)">rgb(100, 100, 90)</li>
+	</ul>
+
+	<ul>background color
+		<li style="background-color: rgb(200, 200, 200);">background-color: rgb(200, 200, 200)</li>
+		<li style="background-color: DarkCyan;">background-color: DarkCyan</li>
+		<li style="background-color: white;">background-color: white</li>
+		<li style="background-color: #ee3e80;">background-color: #ee3e80</li>
+	</ul>
+
+	<ul>opacity
+		<li style="background-color: rgb(0,0,0); opacity: 0.5">background-color: rgb(0,0,0); opacity: 0.8</li>
+		<li style="background-color: rgba(0,0,0,0.5)">background-color: rgba(0,0,0,0.5)</li>
+	</ul>
+
+	<ul>HSL(Hue, Saturation, Lightness)
+		<li style="background-color: hsl(0, 100%, 100%);">background-color: hsl(0, 100%, 100%)</li>
+		<li style="background-color: hsl(0, 0%, 78%);">background-color: hsl(0, 0%, 78%)</li>
+		<li style="background-color: hsla(0, 0%, 78%, 0.5);">background-color: hsla(0, 0%, 78%, 0.5)</li>
+	</ul>
+
+	<ul>Applications: PH Scale
+		<li style="background-color: rgb(238,  62, 128);">14 ALALINE</li>
+		<li style="background-color: rgb(244,  90, 139);">13</li>
+		<li style="background-color: rgb(243, 106, 152);">12</li>
+		<li style="background-color: rgb(244, 123, 166);">11</li>
+		<li style="background-color: rgb(245, 140, 178);">10</li>
+		<li style="background-color: rgb(246, 159, 192);">9</li>
+		<li style="background-color: rgb(245, 176, 204);">8</li>
+		<li style="background-color: rgb(  0, 187, 136);">7 NEUTRAL</li>
+		<li style="background-color: rgb(140, 202, 242);">6</li>
+		<li style="background-color: rgb(114, 193, 240);">5</li>
+		<li style="background-color: rgb( 84, 182, 237);">4</li>
+		<li style="background-color: rgb( 48, 170, 233);">3</li>
+		<li style="background-color: rgb(  0, 160, 230);">2</li>
+		<li style="background-color: rgb(  0, 149, 226);">1</li>
+		<li style="background-color: rgb(  0, 136, 221);">0< ACID/li>
+	</ul>
+
+
+	<h2>Text/Fonts</h2>
+
+		<ul>Generic Font Family
+			<li style="font-family: Times New Roman, Times, serif;">Serif</li>
+			<li style="font-family: Arial, Helvetica, sans-serif;">Sans-serif</li>
+			<li style="font-family: Lucida Console, Courier New, monospace;">Monospace</li>
+			<li style="font-family: Comic Sans MS, cursive;">Cursive</li>
+			<li style="font-family: Impact, Fantasy;">Fantasy</li>
+		</ul>
+
+		<ul>font-family
+			<li style="font-family: Georgia, Times, serif;">font-family: Georgia, Times, serif;</li>
+			<li style="font-family: Arial, Verdana, sans-serif;">font-family: Arial, Verdana, sans-serif</li>
+			<li style="font-family: Arialll, Verdana, sans-serif;">font-family: Arialll, Verdana, sans-serif</li>
+			<li style="font-family: Courier New, Courier, monospace;">font-family: Courier New, Courier, monospace;</li>
+			<li style="font-family: Courier Neww, Courier, monospace;">font-family: Courier Neww, Courier, monospace;</li>
+		</ul>
+
+		<ul>font-size
+			<li>pixel (by default, 16px)
+				<ul>
+					<li style="font-size:  24px;"> 24px</li>		
+					<li style="font-size:  18px;"> 18px</li>
+					<li style="font-size:  16px;"> 16px</li>
+					<li style="font-size:  14px;"> 14px</li>
+				</ul>
+			</li>
+			
+			<li>percentage (compared with the element of parent class)
+				<ul>
+					<li style="font-size:  150%;"> 150%</li>
+					<li style="font-size:  100%;"> 100%</li>
+					<li style="font-size:   50%;">  50%</li>
+				</ul>
+			</li>
+
+			<li>em (relative to the lowercase of m in parent class)
+				<ul>
+					<li style="font-size: 1.5em;">1.5em</li>
+					<li style="font-size:   1em;">  1em</li>
+					<li style="font-size: 0.5em;">0.5em</li>
+				</ul>
+			</li>
+			
+		</ul>
+
+		<ul>font-style		
+			<li style="font-style:  normal;">font-style:  normal;</li>
+			<li style="font-style:  italic;">font-style:  italic;</li>	
+			<li style="font-style: oblique;">font-style: oblique;</li>	
+		</ul>
+
+		<ul>font-weight
+			<li style="font-weight: normal;">font-weight: normal</li>
+			<li style="font-weight: bold;">font-weight: bold</li>
+		</ul>
+
+		<!-- 缩略属性/简写属性 -->
+		<ul>font
+			<li style="font: 17px Georogia, serif;">font: 17px Georogia, serif;</li>
+		</ul>
+
+		<ul>text-transform
+			<li style="text-transform: uppercase;">text-transform: uppercase;</li>
+			<li style="text-transform: lowercase;">text-transform: lowercase;</li>
+			<li style="text-transform: capitalize;">text-transform: capitalize;</li>
+		</ul>
+
+
+		<ul>text-decoration
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<ul>line-height = font-size + leading
+			<li>
+				<p style="line-height: 20px; font-size: 15px;">
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device. The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable. The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+				</p>
+			</li>
+			<li>
+				<p style="line-height: 11px; font-size: 10px;">
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device. The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable. The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.
+				</p>
+			</li>
+		</ul>
+
+		<ul>vertical alignment
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: text-top;">text-top</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: text-bottom;">text-bottom</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: baseline;">baseline</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: top;">top</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: middle;">middle</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: bottom;">bottom</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: sub;">sub</p></li>
+			<li><p><img src="images/quartet.jpeg" width="20%" style="vertical-align: super;">super</p></li>
+		</ul>
+
+
+		<ul>text-indent
+			<li>
+				<p style="line-height: 11px; font-size: 10px;text-indent: 30px;">
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. </p>	
+			</li>
+			<li>
+				<p style="line-height: 11px; font-size: 10px; text-indent: -30px;">
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. </p>
+			</li>
+		</ul>
+
+
+		<ul>text-shadow
+			<li>
+				<p></p>
+			</li>
+			<li>
+				<p></p>
+			</li>
+			<li>
+				<p></p>
+			</li>
+			<li>
+				<p></p>
+			</li>
+			<li>
+				<p></p>
+			</li>
+		</ul>
+
+		<ul>Others
+			<li>letter-spacing</li>
+			<li>word-spacing</li>
+		</ul>
+
+	<h2>box</h2>
+		<div style="width: 100%;">
+			<!-- overflow -->
+			<!-- visible -->
+			<!-- hidden -->
+			<!-- scroll -->
+			<!-- auto -->
+			<p style="border-color: black; border-width: 2px; width: 70%; max-width: 1000px; min-width: 100px; max-height: 100px; overflow: auto; border-style: inset;">
+				Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. 
+			</p>
+		</div>
+
+		<p style="border-style: solid;width: 50%;">
+			border-style: solid
+		</p>
+		<p style="border-style: dotted;width: 50%;">
+			border-style: dotted
+		</p>
+		<p style="border-style: dashed;width: 50%;">
+			border-style: dashed
+		</p>
+		<p style="border-style: double;width: 50%;">
+			border-style: double
+		</p>
+		<p style="border-style: groove;width: 50%;">
+			border-style: groove
+		</p>
+		<p style="border-style: ridge;width: 50%;">
+			border-style: ridge
+		</p>
+		<p style="border-style: inset;width: 50%;">
+			border-style: inset
+		</p>
+		<p style="border-style: outset;width: 50%;">
+			border-style: outset
+		</p>
+
+		<p style="border: 3px dotted #0088dd; width: 50%">
+			border: 3px dotted #0088dd;
+		</p>
+
+
+	<h2>list</h2>
+		<!-- new line auto -->
+		<ul>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: none; margin-right: 10px;">none</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+		</ul>
+
+		<ul>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; visibility: hidden; margin-right: 10px;">Hidden
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			<li style="display: inline; margin-right: 10px;">Home</li>
+			</li>
+		</ul>
+
+
+		<!-- list-style-type -->
+		<!-- none -->
+		<!-- disc -->
+		<!-- circle -->
+		<!-- square -->
+		<!-- if we misused attribute value -->
+		<ol style="list-style-type: square;">
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+		</ol>
+		<!-- list-style-position -->
+		<!-- list-style-image -->
+
+		<!-- list-style -->
+		<!-- unlike border, order does not matter -->
+
+	<h2>tanle</h2>
+
+	<h2>Forms</h2>
+
+
 
 
 </body>
