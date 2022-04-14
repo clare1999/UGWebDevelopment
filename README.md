@@ -13,3 +13,15 @@ Codes for Front-End Design and Development of E-commence System
 reference: 
 1. [集合啦！动物森友会图鉴](https://diobulanduo.gitee.io/animalcrossing.github.io/#/furniture)
 2. [Devil Fruits|One Piece](https://onepiece.fandom.com/wiki/Devil_Fruit)
+
+
+## hmwk2_css3
+### Requirements
+1. html + css
+2. layout as follows:
+	<img src="assets/hmwk2_demo1.png">
+	1. menu using `<li style="display: float;">`
+	2. table using css+div
+	3. design
+3. readability (comments, camel naming, etc.)
+4. deadline April 20
