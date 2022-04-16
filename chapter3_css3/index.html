@@ -36,6 +36,19 @@
 			text-align: justify;
 		}
 
+		input {
+			font-size: 120%;
+			color: #5a5854;
+			background-color: #f2f2f2;
+			border: 1px solid #bdbdbd;
+			border-radius: 5px;
+			padding: 5px 5px 5px 30pxl
+			background-repeat: no-repeat;
+			background-position: 8px 9px;
+			display: block;  /* block element */
+			margin-bottom: 10px;
+		}
+
 		/*class selector*/
 		.note {
 			color: grey;
@@ -62,6 +75,19 @@
 			font-style: bold;
 			font-size: 30px;
 		}
+
+		/*input#email{
+			background-image: url('images/email.png')
+		}
+
+		input#twitter{
+			background-image: url('images/twitter.png')
+		}
+
+		input#web{
+			background-image: url('images/web.png')
+		}*/
+
 
 		/*direct child element selector*/
 		ol>li {
@@ -104,6 +130,12 @@
 		div:hover a{
 			color: white;
 		}
+
+		input:focus, input:hover {
+			background-color: #ffffff;
+			border: 1px solid #b1e1e4;
+		}
+
 		input.submit:hover{
 			background-color: #665544;
 		}
@@ -627,24 +659,17 @@
 
 	<h2>list</h2>
 		<!-- new line auto -->
+		<h4>display</h4>
+		<h5>display: none</h5>
 		<ul>
 			<li style="display: inline; margin-right: 10px;">Home</li>
 			<li style="display: inline; margin-right: 10px;">Home</li>
 			<li style="display: none; margin-right: 10px;">none</li>
 			<li style="display: inline; margin-right: 10px;">Home</li>
 			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
-			<li style="display: inline; margin-right: 10px;">Home</li>
 		</ul>
 
+		<h5>display: hidden</h5>
 		<ul>
 			<li style="display: inline; margin-right: 10px;">Home</li>
 			<li style="display: inline; margin-right: 10px;">Home</li>
@@ -656,32 +681,135 @@
 
 
 		<!-- list-style-type -->
+		<!-- ordered list -->
 		<!-- none -->
 		<!-- disc -->
 		<!-- circle -->
 		<!-- square -->
 		<!-- if we misused attribute value -->
 		<ol style="list-style-type: square;">
-			<li>test</li>
-			<li>test</li>
-			<li>test</li>
+			<li>square</li>
+			<li>square</li>
+			<li>square</li>
 		</ol>
-		<!-- list-style-position -->
-		<!-- list-style-image -->
 
-		<!-- list-style -->
+
+		<!-- unordered listed -->
+		<!-- decimal -->
+		<!-- decimal-leading-zero -->
+		<!-- lower-alpha -->
+		<!-- upper-alpha -->
+		<!-- lower-roman -->
+		<!-- upper roman -->
+
+
+		<!-- list-style-image 引用图片-->
+		<ol style="list-style-image: linear-gradient(to left bottom, white, blue)">
+			<li>list-style-image</li>
+			<li>list-style-image</li>
+			<li>list-style-image</li>
+		</ol>
+
+		<!-- list-style-position -->
+		<!-- outside -->
+		<!-- inside -->
+
+
+		<!-- list-style (缩略属性)-->
 		<!-- unlike border, order does not matter -->
 
+
 	<h2>table</h2>
+
+	<h4>empty-cells</h4>
+	<!-- show -->
+	<!-- hide -->
+	<!-- inherit -->
+	<h5>empty-cells: show;</h5>
+	<table style="empty-cells: show;">
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">1</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;">2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">3</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;"></td>
+		</tr>
+	</table>
+
+	<h5>empty-cells: hide;</h5>
+	<table style="empty-cells: hide;">
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">1</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;">2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">3</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;"></td>
+		</tr>
+	</table>
+
+	<h4>border-spacing & border-collapse</h4>
+	<h5>border-spacing: 5px 15px;</h5>
+	<table style="empty-cells: show; border-spacing: 5px 15px;">
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">1</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;">2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">3</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;"></td>
+		</tr>
+	</table>
+
+	<h5>border-spacing: 5px 15px; border-collapse: separate;</h5>
+	<table style="empty-cells: show; border-spacing: 5px 15px; border-collapse: separate;">
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">1</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;">2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">3</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;"></td>
+		</tr>
+	</table>
+
+	<h5>border-collapse: collapse can invalidate border-spacing</h5>
+	<table style="empty-cells: show; border-spacing: 5px 15px; border-collapse: collapse;">
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">1</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;">2</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #0088dd; padding: 15px;">3</td>
+			<td style="border: 1px solid #0088dd; padding: 15px;"></td>
+		</tr>
+	</table>
 
 
 
 
 	<h2>Forms</h2>
 
+	<form action='http://www.example.com/login.php'>
+		<!--text-->
+		<!-- formatted by document-level selector + psedo class -->
+		<p>Username
+			<input type="text" name="username" maxlength="15" />
+		</p>
+
+	</form>
+
+	<!-- div alignment -->
+
+
 
 
 	<h2>background</h2>
+	<!-- background-attachment -->
+	<!-- background-origin -->
+	<!-- background-position -->
+	<!-- background-clip -->
 	<p style="font-size: 20px;
 			  background-image: url('images/background1.jpeg')">
 		Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. 
@@ -733,7 +861,12 @@
 		<li>absolute</li>
 		<li>fixed</li>
 		<li>float</li>
+		<!-- clear: left/right/both/none -->
+		<!-- float: left/right -->
 	</ol>
+
+	<!-- z-index -->
+
 </body>
 
 

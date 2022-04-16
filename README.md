@@ -19,7 +19,7 @@ reference:
 ### Requirements
 1. html + css
 2. layout as follows:
-	<img src="assets/hmwk2_demo1.png">
+	<img src="assets/hmwk2_demo1.png" style="width: 30px;">
 	1. menu using `<li style="display: float;">`
 	2. table using css+div
 	3. design
