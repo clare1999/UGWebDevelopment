@@ -1,0 +1,170 @@
+body {
+    background: rgb(252, 197, 129) url(../images/background_map.jpeg) repeat top left;
+    color: rgb(0, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    position: relative;
+    margin: 0px;
+}
+
+.header{
+    /* font related */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 13px;
+    color:rgb(214, 212, 212);
+    text-transform: uppercase;
+
+    /* color */
+    background: rgb(134, 97, 2);
+   
+    /* layout */
+    z-index: 1;
+    padding: 5px;
+    margin: 0px auto;
+
+    /* box-shadow */
+	-moz-box-shadow: 5px 5px 5px rgb(142, 116, 116);
+	-webkit-box-shadow: 5px 5px 5px rgb(142, 116, 116);
+	box-shadow: 5px 5px 5px rgb(142, 116, 116);
+}
+
+.header-right {
+    float: right;
+}
+
+.header-sub {
+    
+}
+
+.header-sub-top {
+
+}
+
+.header-sub-bottom {
+
+}
+
+
+
+.page-title {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.menu-container {
+    /* works for menu-container */
+    margin: 20px auto;
+    min-width: 100px;
+    background-color: bisque;
+    /* border-radius: 5px; */
+
+    /* inheritable */
+    /* works for all elements within the container */
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+
+    /* box-shadow is server-dependent */
+	-moz-box-shadow: 5px 5px 5px rgb(142, 116, 116);
+	-webkit-box-shadow: 5px 5px 5px rgb(142, 116, 116);
+	box-shadow: 5px 5px 5px rgb(142, 116, 116);
+}
+
+.inline-li-guides {
+    cursor: pointer;
+    width: 15%;
+    height: 100%;
+    min-width: 100px;
+    display: inline-block;
+    padding: 1%;
+    margin: 0px;
+}
+
+.inline-li-guides:hover{
+    background-color:goldenrod;
+    color: white;
+    border: none;
+    /* border-radius: 5px; */
+}
+
+/* inline-li-guides + hover(background-color is different) */
+.inline-li-guides-selected {
+    background-color:darkgoldenrod;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+    width: 15%;
+    height: 100%;
+    min-width: 100px;
+    display: inline-block;
+    padding: 1%;
+    margin: 0px;
+}
+
+
+.picture-container {
+    /* works for menu-container */
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    /* background-color: bisque; */
+
+    /* inheritable */
+    /* works for all elements within the container */
+    text-align: center;
+}
+
+.inline-li-pictures {
+    display: inline;
+}
+
+.inline-li-pictures div.sub-container {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    padding: 5px;
+    background-color:darkgoldenrod;
+
+    /* box-shadow is server-dependent */
+	-moz-box-shadow: 0px 0px 5px 1px #000;
+	-webkit-box-shadow: 0px 0px 5px 1px #000;
+	box-shadow: 0px 0px 5px 1px #000;
+
+}
+
+.inline-li-pictures div:hover {
+    cursor: pointer;
+    background-color:goldenrod;
+	-moz-box-shadow: 0px 0px 25px 5px #000;
+	-webkit-box-shadow: 0px 0px 25px 5px #000;
+	box-shadow: 0px 0px 25px 5px #000;
+    filter: brightness(100%);
+}
+
+.inline-li-pictures img {
+    margin: auto;
+    width: 100%;
+    height: 80%;
+    object-fit:contain;
+    background-color:bisque;
+    filter: brightness(100%);
+}
+
+.inline-li-pictures span.fruit-price {
+    display: block;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* *:hover{
+    border: solid black;
+} */
