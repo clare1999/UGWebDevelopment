@@ -126,7 +126,7 @@ body {
 #header-sub-order-container {
     cursor: pointer;
     display: inline-block;
-    width: 80px;
+    width: 115px;
     padding: 2px;
     margin: 3px;
     border: solid rgb(134, 97, 2);
@@ -157,6 +157,24 @@ body {
 .page-title {
     text-align: center;
     margin: 20px auto;
+    margin-bottom: 0px;
+}
+
+.page-title-sub {
+    text-align: center;
+    font-style: italic;
+    color:darkred;
+    font-size: larger;
+
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear; 
+}
+
+.page-title-sub:hover {
+    font-size:xx-large;
 }
 
 .menu-container {
@@ -270,6 +288,22 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#footer {
+    margin: auto;
+    text-align: center;
+    background-color:bisque;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 5px;
+    font-size: 13px;
+}
+
+#footer a:link {
+    text-decoration: none;
+    color: rgb(73, 33, 33);
+    font-weight: bold;
+}
 
 /* *:hover{
     border: solid black;
