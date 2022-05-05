@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+    <!-- 1. using external script files -->
+    <script src="javascript/functions.js"></script>
+    <script src="javascript/classes.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- 2. within script -->
+    <script>
+        function refresh(){
+            var sum = parseInt(document.getElementById("span1").innerHTML);
+            sum += parseInt(document.getElementById("span2").innerHTML);
+            document.getElementById("span3").innerHTML = sum;
+        }
+        function reset(){
+            document.getElementById("span3").innerHTML = "?";
+        }
+    </script>
+    <!-- 3. Triggers -->
+    <!-- 
+        onchange
+        onclick
+        onmouseover
+        onmouseout
+        onkeydown
+        onload 
+    -->
+</head>
+
+
+<body style="background-color:blanchedalmond;">
+    <h3>Intro</h3>
+    <h4>JS Demo</h4>
+    <p>a=<span id="span1">1</span></p> 
+    <p>b=<span id="span2">2</span></p> 
+    <p>a+b=<span id="span3">?</span></p> 
+    <button type="button" onclick="refresh()"> refresh span3 </button>
+    <button type="button" onclick="reset()"> reset span3 </button>
+
+    <!-- object: father -->
+    <p id="author" onmouseover="addMyName()" onmouseleave="hideMyName()">
+        My name is
+    </p>
+
+    
+    <h3>Data Types</h3>
+    <p>typeof 'Bill': <span id="typeof1"></span></p>
+    <p>typeof 3.14: <span id="typeof2"></span></p>
+    <p>typeof NaN: <span id="typeof3"></span></p>
+    <p>typeof false: <span id="typeof4"></span></p>
+    <p>typeof [1,2,3,4]: <span id="typeof5"></span></p>
+    <p>typeof {name: 'Bill', age: 62}: <span id="typeof6"></span></p>
+    <p>typeof new Date(): <span id="typeof7"></span></p>
+    <p>typeof function() {}: <span id="typeof8"></span></p>
+    <p>typeof null: <span id="typeof10"></span></p>
+    <p>typeof myCar: <span id="typeof9"></span></p>
+    <p>typeof myRect: <span id="typeof11"></span></p>
+    <p>typeof myRect.area: <span id="typeof12"></span></p>
+    <p>typeof myRect.area(): <span id="typeof13"></span></p>
+    <script>
+        document.getElementById("typeof1").innerHTML = typeof 'Bill';
+        document.getElementById("typeof2").innerHTML = typeof 3.14;
+        document.getElementById("typeof3").innerHTML = typeof NaN;
+        document.getElementById("typeof4").innerHTML = typeof false;
+        document.getElementById("typeof5").innerHTML = typeof [1,2,3,4];
+        document.getElementById("typeof6").innerHTML = typeof {name: 'Bill', age: 62};
+        document.getElementById("typeof7").innerHTML = typeof new Date();
+        document.getElementById("typeof8").innerHTML = typeof function() {};
+        document.getElementById("typeof9").innerHTML = typeof myCar;
+        document.getElementById("typeof10").innerHTML = typeof null;
+        let myRect = new Rectangle(3, 4);
+        document.getElementById("typeof11").innerHTML = typeof myRect;
+        document.getElementById("typeof12").innerHTML = typeof myRect.area;
+        document.getElementById("typeof13").innerHTML = typeof myRect.area();
+    </script>
+
+
+
+    <h3>Variables</h3>
+    <ul>
+        <li>undefined: declared but not yet assigned</li>
+        <li>repeated declaration is allowed</li>
+        <li>undeclared: use strict</li>
+    </ul>
+
+
+
+    <h3>Operators</h3>
+    <p>By Number of Input</p>
+    <ul>
+        <li>unary, e.g. cube, square</li>
+        <li>binary, e.g. plus("1"+0="10"), minus</li>
+        <li>trinary, e.g. if else (?:)</li>
+    </ul>
+
+    <p>By Usage</p>
+    <ul>
+        <li>arithmetic</li>
+        <li>assignment</li>
+        <li>comparsion, e.g. bitwise(&, |, !), logic(&&, ||)</li>
+    </ul>
+
+    <p>5=='5': <span id="operator"></span></p>
+    <p>r1==r2: <span id="operator1"></span></p>
+    <p>r1!=r2: <span id="operator2"></span></p>
+    <p>r1===r2: <span id="operator3"></span></p>
+    <p>r1!==r2: <span id="operator4"></span></p>
+    <p>r1.equals(r2): <span id="operator5"></span></p>
+    <script>
+        let r1 = new Rectangle(3, 4);
+        let r2 = new Rectangle(3, 4);
+        document.getElementById('operator').innerHTML = (5=='5');
+        document.getElementById('operator1').innerHTML = (r1==r2);
+        document.getElementById('operator2').innerHTML = (r1!=r2);
+        document.getElementById('operator3').innerHTML = (r1===r2);
+        document.getElementById('operator4').innerHTML = (r1!==r2);
+        document.getElementById('operator5').innerHTML = (r1.equals(r2));
+    </script>
+
+
+    <h3>Code blocks</h3>
+    <div id="loop"></div>
+    <script>
+        var k;
+        var txt = "";
+        var friend = new Person('Joe', 'White');
+        for (k in friend){
+            txt += k+": "+friend[k]+'<br>';
+        }
+        document.getElementById('loop').innerHTML = txt;
+    </script>
+
+    <script>
+        shapes = [
+            new Rectangle(1, 3.5), 
+            new Rectangle(2, 3.777),
+            new Rectangle(3, 3.888)
+        ]
+        for (var i=0, len=shapes.length; i<len; i++){
+            document.write("rect"+i+": "+JSON.stringify(shapes[i])+"<br>");
+        }
+    </script>
+
+    <script>
+        shapes = [
+            new Rectangle(4, 3), 
+            new Rectangle(5, 3),
+            new Rectangle(6, 3)
+        ]
+        var i=0, len=shapes.length;
+        for (; i<len; i++){
+            document.write("rect"+(i+3)+": "+JSON.stringify(shapes[i])+"<br>");
+        }
+    </script>
+
+
+    <h3>Functions</h3>
+    <h4>Functions are classes in JavaScript</h4>
+    <p>r: <span id="myRect1"></span></p>
+    <p>r.constructor: <span id="myRect2"></span></p>
+    <p>r.constructor.name: <span id="myRect3"></span></p>
+    <p>r.area: <span id="myRect4"></span></p>
+    <p>r.circum: <span id="myRect5"></span></p>
+    <script>
+        let r = new Rectangle(3, 4);
+        document.getElementById("myRect1").innerHTML = r;
+        document.getElementById("myRect2").innerHTML = r.constructor;
+        document.getElementById("myRect3").innerHTML = r.constructor.name;
+        document.getElementById("myRect4").innerHTML = r.area();
+        document.getElementById("myRect5").innerHTML = r.circum();
+        // Prototype vs. Object instances
+        r.newMethod = function(){
+            console.log('New Method called.')
+        }
+    </script>
+
+    <h4>Functional Programming</h4>
+    <h5>Array.prototype.map()</h5>
+    <div id="funcProg1"></div>
+    <script>
+        var el = document.getElementById('funcProg1');
+        var anArr = [2, 5, 6, 3, 8, 9];
+        // lambda in python
+        var newArr = anArr.map(
+            function(val, ind){
+                return {index:ind, value:val*val};
+            }
+        )
+        el.innerHTML = JSON.stringify(newArr);
+    </script>
+
+    <h5>Array.prototype.filter()</h5>
+    <div id="funcProg2"></div>
+    <script>
+        function checkAdult(age) {
+            return age >= 18;
+        }
+        const ages = [32, 33, 16, 40, 50];
+        const result = ages.filter(checkAdult);
+        var el = document.getElementById('funcProg2');
+        el.innerHTML = JSON.stringify(result);
+    </script>
+    
+    
+</body>
