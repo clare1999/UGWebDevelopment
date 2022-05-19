@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Catbook</title>
+</head>
+
+<body>
+    <div class="title">GlobalEventHandlers</div>
+    <div class="note">mixin, being "included" rather than "inherited"</div>
+    <div class="note">define functions & pass in parameters</div>
+    <!-- a class that contains methods for use by other classes 
+    without having to be the parent class of those other classes -->
+    <!-- you can't actually create an object of type GlobalEventHandlers. -->
+
+
+    <div class="title">onabort onerror onload onunload</div>
+    <div class="note">onabort: 图像的加载被中断。</div>
+    <div class="note">onerror: 在加载文档或图像时发生错误。</div>
+    <div class="note">onload: 一张页面或一幅图像完成加载。</div>
+    <div class="note">onunload: 用户退出页面。</div>
+    <img src="Aniya.jpg" 
+         onabort="alert('failed to load Aniya.jpg')" 
+         onerror="{alert('onerror: failed to load Aniya.jpg');this.onerror=null; this.src='Aniya.png';}"
+         onload="alert('successfully loaded Aniya.png');"
+         style="width:200px;">
+    <script src="onload.js"></script>
+    <!-- TODO: define what "abort" is. Closing the window via window manager? 
+    Stopping the load of the page? By which means and reasons (user, 
+    network/server)? At which stages would it fire / be caught? For IE, 
+    onabort is only available with <img> tags. -->
+    <!-- 1.注意函数的定义：直接在 html 的 property value里面 -->
+
+
+    <div class="title">onblur & onfocus</div>
+    <div class="note">onblur: 元素失去焦点。</div>
+    <div class="note">onfocus: 元素获得焦点。</div>
+    <input type="text" value="CLICK HERE" onfocus="inputFocus()" onblur="inputBlur()">
+    <!-- 1. 注意函数的定义：直接在 html 的 property value里面，注意函数需要加括号 -->
+
+
+    <div class="title">onchange</div>
+    <div class="note">onchange: 域的内容被改变。</div>
+    <div class="note">常见场景:当用户改变了 fileUpload, select, text, textarea 等域里的内容时触发。</div>
+    <!-- <input type="text" id="onchangeDemo1" placeholder="Type anything" onchange="upperCase(this.id)" /> -->
+    <input type="text" id="onchangeDemo1" placeholder="Type anything"/>
+    <input type="text" id="onchangeDemo2" placeholder="Type something here, then click outside of the field." size="50">
+    <p id="log"></p>
+    <!-- change events fire when the user commits a value change to a form control. 
+    This may be done, for example, by clicking outside of the control or by using 
+    the Tab key to switch to a different control. 常见场景: 当用户改变了 fileUpload, 
+    select, text, textarea 等域里的内容时触发。 -->
+    
+
+    <div class="title">click</div>
+    <div class="note">onclick</div>
+    <div class="note">Field1: <input type="text" id="field1" value="Hello World!"></div>
+    <div class="note">Field2: <input type="text" id="field2"></div>
+    <input type="button" onclick="document.getElementById('field2').value = document.getElementById('field1').value" value="copy">
+    <input type="button" onclick="document.getElementById('field2').value = ''" value="reset">
+    <!-- The click event is raised when the user clicks on an element. It fires 
+    after the mousedown and mouseup events, in that order. -->
+    
+    <div class="note">ondblclick</div>
+    <p>Double click anywhere in this example.</p>
+    <p id="doubleClickDemo"></p>
+
+
+    <div class="title">mousemove</div>
+    <div class="note">mouseover and mouseout</div>
+    <div id="mousemoveDemo1">Test your mouse on me!</div>
+    
+    <!-- Drawing with mouse events -->
+    <div class="note">mousedown, mousemove, and mouseup</div>
+    <canvas id="myPics" width="560" height="360"></canvas>
+
+
+    <div class="title">onsubmit & oninvalid</div>
+    <div class="note">onsubmit: 确认按钮被点击。</div>
+    <div class="note">onvalid: 判断输入是否符合要求, e.g. required</div>
+
+    <form id="form">
+        <p id="error" hidden>Please fill out all fields.</p>
+        <label for="city">City</label>
+        <input type="text" id="city" required>  
+        <button type="submit">Submit</button>
+    </form>
+    <p id="thanks" hidden>Your data has been received. Thanks!</p>
+    
+
+    <div class="title">onreset</div>
+    <!-- The reset event fires when the user clicks a 
+    reset button in a form (<input type="reset">). -->
+    <form id="formOnresetDemo">
+        <label>Test field<input type="text"></label>
+        <button type="reset">Reset</button>
+    </form>
+    <p id="logOnresetDemo"></p>
+
+
+    <div class="title">onselect</div>
+    <div class="note"></div>
+    <textarea>Try selecting some text in this element.</textarea>
+    <p id="logOnselectDemo"></p>
+    
+
+
+    <div class="title">onresize</div>
+    <div class="note">The resize event fires after the window has been resized.</div>
+    <p>Resize the browser window to fire the resize event.</p>
+    <p>Window height: <span id="height"></span></p>
+    <p>Window width: <span id="width"></span></p>
+
+
+    <div class="title">keyboardEvent</div>
+    <button onclick="ismetaKey(event)">Click me with the meta key</button>
+    <p id="output"></p>
+
+    <div class="title">MouseEvent</div>
+    <button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+    <p id="mouseEventDemo1"></p>
+
+
+    <script src="events.js"></script>
+    <script src="canvasDraw.js"></script>
+    <script src="doubleClick.js"></script>
+    <script src="hoverOver.js"></script>
+    <script src="resetForm.js"></script>
+    <script src="onselect.js"></script>
+    <script src="onresize.js"></script>
+    <script src="button.js"></script>
+    <script src="formSubmit.js"></script>
+
+    
+</body>
+
+</html>

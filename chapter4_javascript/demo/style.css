@@ -1,0 +1,31 @@
+* {
+    background-color: black;
+    color:lightgray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.title {
+    font-weight: bold;
+    color: lightpink;
+    margin: 0px;
+}
+
+.note {
+    font-size: small;
+    color:gray;
+}
+
+canvas {
+    border: 1px solid white;
+    width: 560px;
+    height: 360px;
+}
+
+#doubleClickDemo {
+    border: 1px solid white;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+}
