@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const majorArr = [
+            ['信管', '电商', '金融'],
+            ['德语', '德语金融'],
+            ['俄语', '俄语金融']]
+        
+        const showMajor = () => {
+            let school = document.getElementById('school');
+            let majors = majorArr[school.value];
+            let major = document.getElementById('major');
+            major.options.length = 0;
+            for (let i=0; i<majors.length; i++){
+                let majorText = majors[i];
+                let majorOption = document.createElement('option');
+                let optionText =  document.createTextNode(majorText);
+                majorOption.appendChild(optionText);
+                major.appendChild(majorOption);
+            }
+        }
+
+        const showResult = () => {
+            let school = document.getElementById('school');
+            let major = document.getElementById('major');
+            let text1 = school.options[school.options.selectedIndex].text;
+            let text2 = major.options[major.options.selectedIndex].text;
+            document.getElementById('result').innerHTML = "你所选择的专业是："+text1+"的"+text2;
+        }
+    </script>
+</head>
+
+<body>
+    <div>Choose your school and major</div>
+    <select id="school" onchange="showMajor();">
+        <option value="-1">请选择学院</option>
+        <option value="0">国际商学院</option>
+        <option value="1">德语学院</option>
+        <option value="2">俄语学院</option>
+    </select>
+    <select id="major" onchange="showResult();"></select>
+    <p id="result"></p>
+    
+</body>
