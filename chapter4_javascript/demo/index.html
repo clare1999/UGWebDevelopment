@@ -11,7 +11,13 @@
 <body>
     <div class="title">GlobalEventHandlers</div>
     <div class="note">mixin, being "included" rather than "inherited"</div>
-    <div class="note">define functions & pass in parameters</div>
+    <div class="note">define functions(in html & JS) & pass in parameters</div>
+    <div class="notekey">must specify 3 things:</div>
+    <ol class="note">
+        <li class="notekey">What happened: the event of interest.</li>
+        <li class="notekey">Where it happened: an element of interest.</li>
+        <li class="notekey">What to do: JavaScript to invoke when the event occurs on the element.</li>    
+    </ol>
     <!-- a class that contains methods for use by other classes 
     without having to be the parent class of those other classes -->
     <!-- you can't actually create an object of type GlobalEventHandlers. -->
@@ -22,12 +28,12 @@
     <div class="note">onerror: 在加载文档或图像时发生错误。</div>
     <div class="note">onload: 一张页面或一幅图像完成加载。</div>
     <div class="note">onunload: 用户退出页面。</div>
-    <img src="Aniya.jpg" 
-         onabort="alert('failed to load Aniya.jpg')" 
-         onerror="{alert('onerror: failed to load Aniya.jpg');this.onerror=null; this.src='Aniya.png';}"
+    <!-- <img src="Aniya.jpg" 
+         onabort="alert('onabort: failed to load Aniya.jpg')" 
+         onerror="alert('onerror: failed to load Aniya.jpg'); this.src='Aniya.png';"
          onload="alert('successfully loaded Aniya.png');"
-         style="width:200px;">
-    <script src="onload.js"></script>
+         style="width:200px;"> -->
+    <!-- <script src="onload.js"></script> -->
     <!-- TODO: define what "abort" is. Closing the window via window manager? 
     Stopping the load of the page? By which means and reasons (user, 
     network/server)? At which stages would it fire / be caught? For IE, 
@@ -123,7 +129,11 @@
     <button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
     <p id="mouseEventDemo1"></p>
 
-
+    <div class="title">keyCode, charCode</div>
+    <p>Type anything into the input box below to log a charCode.</p>
+    <input type="text" id="charCodeInput"/>
+    <p id="charCode"></p>
+    
     <script src="events.js"></script>
     <script src="canvasDraw.js"></script>
     <script src="doubleClick.js"></script>
@@ -133,7 +143,7 @@
     <script src="onresize.js"></script>
     <script src="button.js"></script>
     <script src="formSubmit.js"></script>
-
+    <script src="keycode.js"></script>
     
 </body>
 
