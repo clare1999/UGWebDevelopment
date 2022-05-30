@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const verify = () => {
+            let username = document.getElementById("username");
+            let passowrd = document.getElementById("password");
+            if (username.value.length == 0){
+                alert("用户名不能为空");
+                return;
+            }
+            if (passowrd.value.length < 6){
+                alert("密码不能少于6位");
+                return;
+            }
+            passowrd.value = "";
+            username.value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Username: <input type="text" id="username" maxlength="15" placeholder="用户名不能为空"/></p>
+    <p>Password: <input type="password" id="password" maxlength="15" placeholder="密码不能少于6位"/></p>
+    <p><button type="submit" onclick="verify();">Submit</button></p>
+    
+</body>
