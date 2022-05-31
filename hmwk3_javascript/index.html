@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="form-container">
+		<h2>Sign Up</h2>
+		
+    <div class="input-container">
+      <label class="input-label">Username<button class="notification" id="usernameTips">?</button></label>
+      <input type="text" placeholder="cannot be empty" class="input" id='username'/>
+      <small>Error Message1</small>
+      <ol class="hidden-stickers">The username should
+        <li>have at least 6 characters.</li>
+        <li>starts with an alphebat.</li>
+      </ol>
+    </div>
+
+    <div class="input-container">    
+      <label class="input-label">Email</label>
+      <input type="email" placeholder="should be a valid email address" class="input" id='email'/> 
+      <small>Error Message2</small>
+    </div>
+
+    <div class="input-container">
+      <label class="input-label">Birthday</label>
+      <input type="date"  class="input" id='birthday'/>
+      <small>Error Message3</small>
+    </div>
+
+    <div class="input-container">
+      <label class="input-label">Password<button class="notification" id="password1Tips">?</button></label>
+      <input type="password" placeholder="enter password" class="input" id='password1'/>
+      <small>Error Message4</small>
+      <ol class="hidden-stickers">The password should
+        <li>have at least 1 alphebat.</li>
+        <li>have at least 1 number.</li>
+        <li>have at least 6 characters.</li>
+      </ol>
+    </div>
+
+    <div class="input-container">
+      <label class="input-label">Confirm Password</label>
+      <input type="password" placeholder="confirm passowrd" class="input" id='password2'/>  
+      <small>Error Message5</small>
+    </div>
+    
+    <input type="submit" value="Submit" class='submit-button' id='submit'/>
+    
+    <!-- <div class="input-container" id="term">
+      <input type="checkbox" required/>
+      <label>I accept the Terms of Service.</label>
+	  </div> -->
+
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>

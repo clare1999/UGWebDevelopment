@@ -43,3 +43,17 @@ reference:
 reference:
 1. [page layout](https://blog.hubspot.com/website/how-to-inspect)
 2. [header](https://www.amazon.com)
+
+
+## hmwk_javascript3
+### Requirements
+1. 实现一个主题明确的、布局美观的、流程合理的表单
+2. 尽可能多使用表单元素，注意多使用H5新元素
+3. 实现人性化的、友好的表单验证功能，在合适的时间和合适地点，给用户合适的提示，包括用户输入之前以及用户输入之后。
+4. 自己多做测试，穷尽各种奇怪组合的输入
+5. deadline: by May 31st, 22:00
+
+reference:
+1. [form-validator](https://github.com/bradtraversy/vanillawebprojects/tree/master/form-validator)
+2. [movie-seat-booking](https://github.com/bradtraversy/vanillawebprojects/tree/master/movie-seat-booking)
+
