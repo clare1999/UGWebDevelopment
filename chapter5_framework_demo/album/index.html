@@ -2,18 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
     <title>Album example · Bootstrap v5.0</title>
 
+    <!-- A canonical tag (aka "rel canonical") is a way of telling search engines that a specific 
+    URL represents the master copy of a page. Using the canonical tag prevents problems caused 
+    by identical or "duplicate" content appearing on multiple URLs. -->
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
-    
-
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 也可以使用外部导入的方法 -->
+    <!-- <link href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <!-- <script href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
     <style>
       .bd-placeholder-img {
@@ -30,15 +35,17 @@
         }
       }
     </style>
-
-    
   </head>
+
   <body>
     
 <header>
+  <!-- Collapsing an element will animate the height from its current value to 0 -->
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
+        <!-- py: padding top and bottom -->
+        <!-- px: padding left and right -->
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">About</h4>
           <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
@@ -54,21 +61,41 @@
       </div>
     </div>
   </div>
+  <!-- color schemes: Choose from .navbar-light for use with light background colors, 
+    or .navbar-dark for dark background colors -->
+  <!-- shadow: shadow-none, shadow-sm, shadow(regular), shadow-lg -->
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <!-- nested node in svg: rect, circle, polygon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" 
+             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+             stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+            <!-- the outline of camera -->
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <!-- the outline of the camera glass -->
+            <circle cx="12" cy="13" r="4"/>
+        </svg>
         <strong>Album</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Add data-toggle="button" to toggle a button’s active state.  -->
+      <!-- If you’re pre-toggling a button, you must manually add the 
+        .active class and aria-pressed="true" to the <button>. -->
+      <!-- aria: Accessible Rich Internet Applications -->
+      data attributes now start with data-bs in Bootstrap5
+      <button class="navbar-toggler" type="button"  data-bs-toggle="collapse"
+              data-bs-target="#navbarHeader" aria-controls="navbarHeader" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <!--defined by bootstrap, probably by using svg tage-->
+        <span class="navbar-toggler-icon"></span>  
       </button>
     </div>
   </div>
 </header>
 
 <main>
-
+  <!-- padding ranges from 0 to 5 inclusive, 
+    more details: https://getbootstrap.com/docs/4.0/utilities/spacing/-->
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
