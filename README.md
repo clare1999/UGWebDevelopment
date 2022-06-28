@@ -45,7 +45,7 @@ reference:
 2. [header](https://www.amazon.com)
 
 
-## hmwk_javascript3
+## hmwk3_javascript3
 ### Requirements
 1. 实现一个主题明确的、布局美观的、流程合理的表单
 2. 尽可能多使用表单元素，注意多使用H5新元素
@@ -57,3 +57,23 @@ reference:
 1. [form-validator](https://github.com/bradtraversy/vanillawebprojects/tree/master/form-validator)
 2. [movie-seat-booking](https://github.com/bradtraversy/vanillawebprojects/tree/master/movie-seat-booking)
 
+
+## hmwk4_bootstrap
+### Requirements
+1. 每人独立完成，独立展示(展示时间待定);
+2. 综合运用 HTML, CSS 和 JS 知识，基于 Bootstrap 框架，实现一个电商站点前端;
+3. 单独绘制站点地图和页面线框图，并作为课程设计的一部分提交;(手画或者借助画图工具皆可)
+4. 整个站点，要求主题明确，风格统一，页面美观，逻辑清晰，使用顺畅;
+5. 站点至少包括4类页面，分别是:
+	1. 主页，至少要求有header模块，站点导航模块，会员登陆与注册模块，商品展示模块，商品搜索 模块，订单查询模块，联系我们模块，footer模块;
+	2. 会员注册页(做表单验证);
+	3. 会员登陆页(做表单验证);
+	4. 商品细节展示(含:添加购物车，用户评论)，可有多个商品页。 
+6. 根据需要，自行添加至少一个完整页面，作为附加功能。
+7. 除了提交源代码，站点地图和页面线框图，还需要提交一个简略的站点功能介绍(半页纸即可)，尤其重点描述附加功能。
+
+reference: 
+1. [rottentomatoes](https://www.rottentomatoes.com)
+2. [IMDb](https://www.imdb.com/?ref_=nv_home)
+3. [mclcinema](https://www.mclcinema.com/MovieSet.aspx?gv=0&visLang=2&id=12403)
+4. [pacific place](https://www.pacificplace.com.hk/en/entertainment/cinema/movie?movieid=13824&lang=eng)
