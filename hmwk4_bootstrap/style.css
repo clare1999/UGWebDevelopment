@@ -2,4 +2,137 @@
 body {
     min-height: 75rem;
     padding-top: 4.5rem;
+    background-color: #B4F2FD!important;
   }
+
+.subNavBar{
+    background-color: #AFADAD;
+    padding: auto;
+    padding-top: 11px;
+    padding-right: 10px;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+}
+
+.social-button {
+    width: 20px;
+    height: 24px;
+    padding: 0px;
+    margin-right: 10px;
+    float: right;
+}
+
+.social-button-icon {
+    display: block;
+    margin: -7px;
+    padding: 0px;
+}
+
+.carousel-div {
+    margin-top: 18px;
+    background-color: black;
+}
+
+.carousel-img {
+    height: 400px;
+    margin: auto;
+    margin: auto;
+}
+
+
+.carousel-words{
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    font-size: 12px!important;
+}
+
+
+
+.section-head{
+    margin-top: 50px;
+    color: #01206A;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+.section-all-posters-container{
+    margin: auto;
+    width: 60%;
+    /* max-width: 1000px; */
+    min-width: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+.section-poster-container {
+    position: relative;
+    margin: auto;
+    width: 20%;
+    /* max-width: 200px; */
+    min-width: 100px;
+    display: inline-block;
+  }
+
+.section-poster-image {
+    border-radius: 10px;
+    margin: auto;
+    opacity: 1;
+    display: block;
+    width: 80%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+
+.section-poster-hover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section-poster-hover-text {
+    text-decoration: none;
+    background-color: black;
+    border: white 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .section-poster-container:hover .section-poster-image {
+    filter: brightness(30%);
+  }
+  
+  .section-poster-container:hover .section-poster-hover {
+    opacity: 1;
+    font-weight: bolder;
+  }
+
+  .section-poster-container:hover .section-poster-hover-text {
+    color: white;
+  }
+  
+
+.section-map-container {
+    margin: auto;
+    width: 60%;
+}
+
+.section-map {
+    border-radius: 10px;
+    border: 3px solid grey;
+    margin-bottom: 30px;
+}
