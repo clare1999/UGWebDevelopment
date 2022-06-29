@@ -23,108 +23,127 @@
 <body class="form-body">
         <main class="form-main" style="max-width: 600px;">
                 <form>
-                        <img class="mb-5 mx-auto d-block" src="./assets/logo_peeking_cat.png" alt="" height="40">
+                        <img class="mb-5 mx-auto d-block" src="./assets/logo_peeking_cat.png" alt="" height="40" id="cat">
                         <!-- <h1 class="h3 mb-3 fw-normal">sign in</h1> -->
                         <h1 class="mb-4 form-title">sign up</h1>
                 
                         
-                        <form class="row g-3 needs-validation" novalidate>
+                        <form class="row g-3 needs-validation" action="index.html" novalidate id="validationForm">
                             <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="validationCustom01" class="form-label  mb-1">First name</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                                    <!-- <div class="valid-feedback">Looks good!</div> -->
+                                <div class="col-md-4">
+                                    <label for="validationFirstname" class="form-label  mb-1">First name</label>
+                                    <input type="text" class="form-control" id="validationFirstname" value="" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Your firstname is empty.</div>
                                 </div>
                                 
-                                <div class="col-md-6">
-                                    <label for="validationCustom02" class="form-label  mb-1">Last name</label>
-                                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                                    <!-- <div class="valid-feedback">Looks good!</div> -->
+                                <div class="col-md-4">
+                                    <label for="validationLastname" class="form-label  mb-1">Last name</label>
+                                    <input type="text" class="form-control" id="validationLastname" value="" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Your lastname is empty.</div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="validationBirthday" class="form-label mb-1">Birthday</label>
+                                    <input type="date" class="form-control" id='validationBirthday'/>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Your birthday is empty.</div>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="validationCustomUsername" class="form-label  mb-1">Username</label>
+                                    <label for="validationUsername" class="form-label  mb-1">Username</label>
                                     <div class="input-group has-validation">
                                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                                        <!-- <div class="invalid-feedback">Please choose a username.</div> -->
+                                        <input type="text" class="form-control" id="validationUsername" aria-describedby="inputGroupPrepend" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please choose a username.</div>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="validationCustom02" class="form-label  mb-1">Email</label>
-                                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                                    <!-- <div class="valid-feedback">Looks good!</div> -->
+                                    <label for="validationEmail" class="form-label mb-1">Email</label>
+                                    <input type="text" class="form-control" id="validationEmail" value="" required>
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">The Email is not valid.</div>
                                 </div>
                             </div>
 
 
                             
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="validationCustom03" class="form-label  mb-1">City</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
-                                    <!-- <div class="invalid-feedback">Please provide a valid city.</div> -->
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <label for="validationCity" class="form-label  mb-1">City</label>
+                                    <input type="text" class="form-control" id="validationCity" required>
+                                    <div class="invalid-feedback">Your city is empty.</div>
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
     
-                                <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label  mb-1">State</label>
-                                    <select class="form-select" id="validationCustom04" required>
+                                <div class="col-md-5">
+                                    <label for="validationState" class="form-label  mb-1">State</label>
+                                    <select class="form-select" id="validationState" required>
                                         <option selected disabled value="">Choose...</option>
-                                        <option>...</option>
+                                        <option>Beijing</option>
+                                        <option>Shanghai</option>
+                                        <option>Guangdong</option>
+                                        <option>Jiangsu</option>
+                                        <option>Shandong</option>
                                     </select>
-                                    <!-- <div class="invalid-feedback">Please select a valid state.</div> -->
+                                    <div class="valid-feedback">Looks good!</div>
+                                    <div class="invalid-feedback">Please select a valid state.</div>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <label for="validationCustom05" class="form-label  mb-1">Zip</label>
-                                    <input type="text" class="form-control" id="validationCustom05" required>
-                                    <!-- <div class="invalid-feedback">Please provide a valid zip.</div> -->
+                                    <label for="validationZip" class="form-label  mb-1">Zip</label>
+                                    <input type="text" class="form-control" id="validationZip" required>
+                                    <div class="invalid-feedback">Your zip is empty.</div>
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <label for="validationCustom03" class="form-label  mb-1">Address</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
-                                    <!-- <div class="invalid-feedback">Please provide a valid city.</div> -->
+                                    <label for="validationAddress" class="form-label  mb-1">Address</label>
+                                    <input type="text" class="form-control" id="validationAddress" required>
+                                    <div class="invalid-feedback">Your address is empty.</div>
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <label for="validationCustom03" class="form-label mb-1">Passwords</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
-                                    <!-- <div class="invalid-feedback">Please provide a valid city.</div> -->
+                                    <label for="validationPassword1" class="form-label mb-1">Passwords</label>
+                                    <input type="password" class="form-control" id="validationPassword1" required>
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
-                            </div>
-
-
-                            <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <label for="validationCustom03" class="form-label mb-1">Re enter Passwords</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
-                                    <!-- <div class="invalid-feedback">Please provide a valid city.</div> -->
+                                    <label for="validationPassword2" class="form-label mb-1">Re enter Passwords</label>
+                                    <input type="password" class="form-control" id="validationPassword2" required>
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
                             </div>
+
 
                             <div class="col-12 mb-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                    <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
-                                    <!-- <div class="invalid-feedback">You must agree before submitting.</div> -->
+                                    <input class="form-check-input" type="checkbox" value="" id="validationTerm" required>
+                                    <label class="form-check-label" for="validationTerm">Agree to terms and conditions</label>
+                                    <!-- <div class="invalid-feedback">You must agree before submitting.</div>
+                                    <div class="valid-feedback">Looks good!</div> -->
                                 </div>
                             </div>
 
-                            <button class="w-100 btn btn-lg btn-outline-light form-button" type="submit">Sign up</button>
+                            <button class="w-100 btn btn-lg btn-outline-light form-button" type="submit" id="validationSubmit">Sign up</button>
                             <p class="mt-5 mb-3" style="color: grey; text-align: center;">&copy; 2017–2022</p>
 
                         </form>
 
-                        
                 </form>
         </main>
-
+        <script src="validityHelper.js"></script>
+        <script src="validitySignup.js"></script>
 </body>

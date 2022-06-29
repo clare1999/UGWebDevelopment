@@ -1,0 +1,69 @@
+html,
+body {
+  height: 100%;
+}
+
+.form-body {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 90px;
+  background-color: #01206A;
+  color: white;
+}
+
+.form-main {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-title {
+    text-transform: uppercase;
+    color: white;
+    size: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.form-main .checkbox {
+  font-weight: 400;
+}
+
+.form-main .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-main input[type="email"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  /* border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; */
+}
+
+.form-main input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  /* border-top-left-radius: 0;
+  border-top-right-radius: 0; */
+}
+
+
+.form-button {
+    background-color: #01206A!important;
+    font-weight: bold!important;
+    border: solid 1px #B4F2FD!important;
+    color: #B4F2FD!important;
+    margin-bottom: 20px;
+}
+
+
+.form-button:hover{
+    color: #01206A!important;
+    background-color: #B4F2FD!important;
+    font-weight: bold!important;
+}
+
+
+
