@@ -27,23 +27,28 @@
                         <!-- <h1 class="h3 mb-3 fw-normal">sign in</h1> -->
                         <h1 class="mb-4 form-title">sign in</h1>
                 
-                        <div class="form-floating">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput" style="color: gray">Email address</label>
+                        <div class="form-floating m-4">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="username">
+                                <label for="floatingInput" style="color: gray">Username</label>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please choose a username.</div>
                         </div>
                         
-                        <div class="form-floating">
-                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <div class="form-floating m-4">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="password">
                                 <label for="floatingPassword" style="color: gray">Password</label>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please choose a username.</div>
                         </div>
                 
                         <div class="checkbox m-3">
                                 <label><input type="checkbox" value="remember-me"> Remember me </label>
                         </div>
 
-                        <button class="w-100 btn btn-lg btn-outline-light form-button" type="submit">Sign in</button>
+                        <button class="w-100 btn btn-lg btn-outline-light form-button" type="submit" id="submit">Sign in</button>
                         <p class="mt-5 mb-3" style="color: grey; text-align: center;">&copy; 2017–2022</p>
                 </form>
         </main>
-
+        <script src="validityHelper.js"></script>
+        <script src="validitySignin.js"></script>
 </body>

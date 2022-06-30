@@ -35,7 +35,7 @@ body {
   z-index: 2;
 }
 
-.form-main input[type="email"] {
+.form-main input[type="text"] {
   margin-bottom: 10px;
   border-radius: 5px;
   /* border-bottom-right-radius: 0;

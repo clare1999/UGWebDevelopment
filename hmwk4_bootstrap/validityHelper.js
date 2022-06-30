@@ -145,7 +145,18 @@ const checkAll = (event) => {
 	flag = flag & checkTermInner(term);
 	if (flag){
 		window.alert("Successfully Signed Up!");
-		window.location = 'index.html';
+		window.location.href = 'index.html?username='+username.value;
+	}
+}
+
+const checkLoginInfo = (event) => {
+	event.preventDefault();
+	let flag = true;
+	flag = flag & checkUserNameInner(username);
+	flag = flag & checkPasswordInner(password);
+	if (flag){
+		window.alert("Successfully Signed In!");
+		window.location.href = 'index.html?username='+username.value;
 	}
 }
 
